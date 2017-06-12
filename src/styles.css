@@ -1,0 +1,46 @@
+.coffee-brand-carousel.ui-carousel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.coffee-brand-carousel.ui-carousel .ui-carousel-viewport {
+  flex: 1;
+}
+.coffee-brand-carousel.ui-carousel .ui-carousel-items {
+  height: 100%;
+}
+.coffee-brand-carousel.ui-carousel .ui-carousel-item {
+  height: 100%;
+}
+.coffee-brand-carousel.ui-carousel .coffee-brand-logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 20px;
+}
+.coffee-brand-carousel.ui-carousel .coffee-brand-logo img {
+  height: 175px;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  position: absolute;
+  background-color: #2A1B3D;
+}
+body {
+  font-family: 'Avenir Next', Verdana, Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+h2 {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.widget .ui-widget {
+  font-family: 'Avenir Next', Verdana, Arial, Helvetica, sans-serif;
+}

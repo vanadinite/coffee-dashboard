@@ -1,0 +1,63 @@
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.pad-15 {
+  padding: 15px;
+}
+
+.flex-parent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#header {
+  background-color: #333333;
+  color: #FFF;
+  height: 60px;
+
+  #coffee-logo {
+    height: 50px;
+  }
+}
+
+#body {
+  flex: 1;
+
+  #left-column {
+    width: 20%; 
+    background-color: rgba(255, 255, 255, 0.5);
+
+    .widget {
+      height: 50%;
+    }
+  }
+  #center-column {
+    width: 60%;
+
+    .widget {
+      height: 100%;
+    }
+  }
+  #right-column {
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    .widget {
+      height: 100%;
+    }
+  }
+}
+
+#footer {
+  padding: 15px;
+}

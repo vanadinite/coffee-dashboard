@@ -1,0 +1,12 @@
+<p-dataTable [value]="coffeePurchases" [rows]="8" [paginator]="true" [resizableColumns]="true" >
+    <p-column field="date" header="Date"></p-column>
+    <p-column field="brand" header="Brand">
+        <ng-template let-col let-row="rowData" let-ri="rowIndex" pTemplate="body">
+            <div class="brand-logo">
+                <img src="assets/{{row.brand}}" />
+            </div>
+        </ng-template>
+    </p-column>
+    <p-column field="roast" header="Roast"></p-column>
+    <p-column field="amount" header="Amount"></p-column>
+</p-dataTable>
