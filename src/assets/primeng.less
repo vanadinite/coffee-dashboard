@@ -1,25 +1,112 @@
 .coffee-brand-carousel.ui-carousel {
-  height: 50%;
+  height: 55%;
+  min-height: 50%;
   display: flex;
   flex-direction: column;
-}
-.coffee-brand-carousel.ui-carousel .ui-carousel-viewport {
-  flex: 1;
-}
-.coffee-brand-carousel.ui-carousel .ui-carousel-items {
-  height: 100%;
-}
-.coffee-brand-carousel.ui-carousel .ui-carousel-item {
-  height: 100%;
-}
-.coffee-brand-carousel.ui-carousel .coffee-brand-logo {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin: 20px;
-}
-.coffee-brand-carousel.ui-carousel .coffee-brand-logo img {
-  height: 175px;
+  border: none;
+  background: none;
+  border-radius: none;
+
+  .ui-carousel-header {
+    background: #EEE;
+    border: none;
+    border-radius: 0;
+    padding: 5px;
+
+    .ui-carousel-header-title {
+      display: none;
+    }
+  }
+
+  .ui-carousel-viewport {
+    flex: 1;
+  }
+
+  .ui-carousel-items {
+    height: 100%;
+  }
+
+  .ui-carousel-item {
+    height: 100%;
+    padding: 15px!important;
+    border-radius: 0;
+    margin: 5px!important;
+  }
+
+  .coffee-info {
+    .ui-grid-row {
+      padding: 10px;
+
+      @media screen and (max-width: 1024px) {
+        display: block;
+      }
+      
+      .ui-grid-col-6 {
+        @media screen and (max-width: 1024px) {
+          display: block;
+          float: none;
+          width: 100%;
+        }
+      }
+    }
+    .ui-grid-row:nth-child(odd) {
+      background-color: #EEE;
+    }
+
+    .label {
+      font-weight: 600;
+    }
+  }
+
+  .ui-rating {
+    a {
+      text-decoration: none;
+      color: #666;
+    }
+    .fa-star {
+      color: @yellow;
+      text-shadow: -1px 0 #666, 0 1px #666, 1px 0 #666, 0 -1px #666;
+    }
+    .fa-ban {
+      color: @red;
+    }
+  }
+
+  .coffee-brand-logo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    max-height: 300px;
+    max-width: 300px;
+    position: relative;
+    margin-bottom: 25px;
+
+    @media screen and (max-width: 1600px) {
+      max-height: 200px;
+    }
+    @media screen and (max-width: 1024px) {
+      max-height: 150px;
+      font-size: 12px;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 75%;
+      max-height: 250px;
+    }
+
+    @media screen and (max-width: 1600px) {
+      max-height: 200px;
+    }
+    @media screen and (max-width: 1024px) {
+      max-height: 150px;
+    }
+  }
+
 }
 
 .ui-orderlist {
@@ -37,5 +124,15 @@
 }
 
 .ui-datatable {
-  height: 50%;
+  margin-top: 25px;
+}
+
+button {
+  color: #FFF;
+  border: 0;
+  background-color: @light-purple;
+  padding: 5px 10px;
+  font-size: 12px;
+  float: right;
+  margin-right: -10px;
 }

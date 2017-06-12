@@ -1,29 +1,28 @@
 <p-growl [value]="msgs"></p-growl>
 
+<h2>COFFEE BRANDS</h2>
 <p-carousel headerText="Coffee Brands" styleClass="coffee-brand-carousel" [value]="coffeeBrands">
     <ng-template let-coffeeBrand pTemplate="item">
-        <div class="ui-grid ui-grid-responsive">
+        <div class="coffee-brand-logo"><img src="assets/{{coffeeBrand.imageUrl}}" /></div>
+        <div class="ui-grid ui-grid-responsive coffee-info">
             <div class="ui-grid-row">
-                <div class="ui-grid-col-12" class="coffee-brand-logo"><img src="assets/{{coffeeBrand.imageUrl}}" /></div>
-            </div>
-            <div class="ui-grid-row">
-                <div class="ui-grid-col-6">Name</div>
+                <div class="ui-grid-col-6 label">Name</div>
                 <div class="ui-grid-col-6">{{coffeeBrand.name}}</div>
             </div>
             <div class="ui-grid-row">
-                <div class="ui-grid-col-6">Favorite Roast</div>
+                <div class="ui-grid-col-6 label">Favorite Roast</div>
                 <div class="ui-grid-col-6">{{coffeeBrand.favoriteRoast}}</div>
             </div>
             <div class="ui-grid-row">
-                <div class="ui-grid-col-6">City</div>
+                <div class="ui-grid-col-6 label">City</div>
                 <div class="ui-grid-col-6">{{coffeeBrand.city}}</div>
             </div>
             <div class="ui-grid-row">
-                <div class="ui-grid-col-6">Average Cost</div>
+                <div class="ui-grid-col-6 label">Average Cost</div>
                 <div class="ui-grid-col-6">${{coffeeBrand.averageCostPerLb}}/lb</div>
             </div>
             <div class="ui-grid-row">
-                <div class="ui-grid-col-6">Rating</div>
+                <div class="ui-grid-col-6 label">Rating</div>
                 <div class="ui-grid-col-6">
                     <p-rating [(ngModel)]="coffeeBrand.rating"></p-rating>
                 </div>

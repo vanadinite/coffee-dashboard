@@ -20,6 +20,18 @@
   height: 100%;
 }
 
+.widget {
+  display: block;
+  margin-bottom: 25px;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 15px;
+
+  :last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
 #header {
   background-color: #333333;
   color: #FFF;
@@ -35,10 +47,9 @@
 
   #left-column {
     width: 20%; 
-    background-color: rgba(255, 255, 255, 0.5);
 
     .widget {
-      height: 50%;
+      height: calc(~'50% - 12.5px');
     }
   }
   #center-column {
@@ -50,7 +61,6 @@
   }
   #right-column {
     width: 20%;
-    background-color: rgba(255, 255, 255, 0.5);
 
     .widget {
       height: 100%;
